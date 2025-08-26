@@ -1,4 +1,4 @@
-/* style.css - Fondo negro, móvil perfecto, sin errores */
+/* style.css - Fondo de la imagen, logo con "University IA", colores azules y dorados */
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -6,7 +6,8 @@
   --primary: #0f0;
   --dark: #000;
   --light: #fff;
-  --gray: #aaa;
+  --gold: #ffd700;
+  --blue: #00bfff;
 }
 
 * {
@@ -18,9 +19,8 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #000;
-  color: #0f0;
-  line-height: 1.6;
-  text-shadow: 0 0 5px #0f0;
+  color: #fff;
+  line-height: 1.7;
 }
 
 .container {
@@ -28,6 +28,22 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.sub-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: var(--blue);
+  display: block;
+  margin-top: 5px;
 }
 
 /* Header */
@@ -38,7 +54,7 @@ header {
   top: 0;
   z-index: 1000;
   padding: 15px 0;
-  border-bottom: 1px solid var(--primary);
+  border-bottom: 1px solid var(--gold);
 }
 
 header .container {
@@ -47,38 +63,29 @@ header .container {
   align-items: center;
 }
 
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.6rem;
-  color: var(--primary);
-}
-
 nav ul {
   display: flex;
   list-style: none;
 }
 
-nav ul li {
-  margin-left: 1.5rem;
-}
-
 nav ul li a {
-  color: #ddd;
-  font-size: 0.9rem;
-  text-transform: uppercase;
+  color: var(--light);
+  margin-left: 2rem;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: var(--primary);
+  color: var(--gold);
 }
 
-/* Hero */
+/* Hero con fondo de la imagen */
 .hero {
   padding: 180px 0 100px;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)),
-              url('https://images.unsplash.com/photo-1624375196881-4d5ae0dbf011?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') 
-              center/cover no-repeat;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url('https://images.unsplash.com/photo-1624375196881-4d5ae0dbf011?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') 
+    center/cover no-repeat;
   text-align: center;
   color: white;
 }
@@ -90,14 +97,13 @@ nav ul li a:hover {
 
 h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: white;
   margin-bottom: 1rem;
 }
 
 .highlight {
-  color: var(--primary);
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  color: var(--gold);
 }
 
 .sub {
@@ -108,7 +114,7 @@ h1 {
 
 /* Botones */
 .btn-primary {
-  background: var(--primary);
+  background: var(--gold);
   color: #000;
   padding: 12px 30px;
   border: none;
@@ -122,19 +128,20 @@ h1 {
 }
 
 .btn-primary:hover {
-  background: #00ff00;
+  background: #ffeb3b;
   transform: translateY(-2px);
 }
 
 /* Cursos */
 .courses {
   padding: 80px 0;
+  background: #000;
 }
 
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--gold);
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -148,10 +155,10 @@ h1 {
 
 .course-card {
   background: rgba(0, 20, 0, 0.4);
-  border: 1px solid var(--primary);
+  border: 1px solid var(--gold);
   padding: 20px;
   width: 300px;
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid var(--gold);
   transition: transform 0.3s;
 }
 
@@ -160,7 +167,7 @@ h1 {
 }
 
 .course-card h3 {
-  color: var(--primary);
+  color: var(--gold);
   margin-bottom: 1rem;
 }
 
@@ -170,11 +177,44 @@ h1 {
 }
 
 .price {
-  color: var(--primary);
+  color: var(--gold);
   font-size: 1.3rem;
   font-weight: 700;
   margin: 1rem 0;
   display: block;
+}
+
+/* Estudiantes Activos */
+.students {
+  padding: 80px 0;
+  background: #000;
+}
+
+.student-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.student-item {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  transition: transform 0.3s;
+}
+
+.student-item:hover {
+  transform: scale(1.1);
+}
+
+.student-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Testimonios */
@@ -183,24 +223,35 @@ h1 {
   background: #000;
 }
 
-.testimonial-cards {
+.testimonial-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-top: 2rem;
 }
 
-.testimonial {
+.testimonial-item {
   background: rgba(0, 20, 0, 0.3);
-  padding: 20px;
-  max-width: 300px;
-  border-left: 3px solid var(--primary);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  text-align: center;
 }
 
-.student {
-  color: var(--primary);
-  font-weight: 600;
-  margin-top: 1rem;
+.testimonial-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid var(--gold);
+}
+
+.testimonial-item p {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin: 0;
 }
 
 /* Footer */
@@ -219,12 +270,12 @@ footer {
 }
 
 .footer-left h3 {
-  color: var(--primary);
+  color: var(--gold);
   margin-bottom: 1rem;
 }
 
 .social a {
-  color: var(--primary);
+  color: var(--gold);
   margin: 0.5rem 0;
   display: block;
   font-size: 1.1rem;
@@ -237,55 +288,7 @@ footer {
 .footer-bottom {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 255, 0, 0.2);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
   font-size: 0.9rem;
   color: #777;
-}
-
-/* Alerta */
-.alert {
-  background: #ff4136;
-  color: white;
-  text-align: center;
-  padding: 8px;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-/* Responsive - Móvil perfecto */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul {
-    margin-top: 10px;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-  .hero {
-    padding: 150px 0 80px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  .section-title {
-    font-size: 1.8rem;
-  }
-  .course-cards, .testimonial-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .course-card, .testimonial {
-    width: 100%;
-    max-width: 350px;
-  }
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .social a {
-    text-align: center;
-  }
 }
