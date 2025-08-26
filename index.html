@@ -1,172 +1,196 @@
-/* style.css - Diseño Futurista: Matrix + Terminator */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Nuevo Mundo IA - Donde adolescentes y adultos dominan la IA para generar ingresos reales.">
+  <meta name="google-site-verification" content="a8d79e2dbd4aa59c" />
+  <title>Nuevo Mundo IA | Gana Dinero con Inteligencia Artificial</title>
 
-/* Fondo de terminal digital animado */
-@keyframes matrix {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 100vh; }
-}
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Courier New', monospace;
-  background: #000 url('https://images.unsplash.com/photo-1555066931-4365933ea28c?q=80&w=2070&auto=format&fit=crop') center/cover fixed;
-  color: #0f0;
-  line-height: 1.8;
-  text-shadow: 0 0 5px #0f0;
-  background-blend-mode: overlay;
-  min-height: 100vh;
-  position: relative;
-}
+  <!-- 🔴 BANNER DE ESCASEZ -->
+  <div class="alert">
+    ⏳ ¡ÚLTIMOS 50 CUPOS! La cohorte cierra en 48 horas. Más de 2.300 personas ya inscritas.
+  </div>
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 20, 0, 0.15),
-    rgba(0, 20, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  ), 
-  linear-gradient(rgba(0, 10, 0, 0.8), rgba(0, 20, 0, 0.9));
-  pointer-events: none;
-  z-index: -1;
-}
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">Nuevo Mundo IA</div>
+      <nav>
+        <ul>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#metodo">Método</a></li>
+          <li><a href="#testimonios">Estudiantes</a></li>
+          <li><a href="#contacto" class="btn-small">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* Efecto de texto neón */
-h1, h2, h3, .highlight, .btn-primary {
-  color: #0f0 !important;
-  text-shadow: 
-    0 0 5px #0f0,
-    0 0 10px #0f0,
-    0 0 20px #0f0,
-    0 0 40px #0f0;
-  font-weight: bold;
-}
+  <!-- Hero con fondo de "La Creación de Adán" reimaginado -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Adolescentes y adultos están <span class="highlight">ganando dinero con IA</span><br>¿Serás el próximo?</h1>
+        <p class="sub">
+          Únete a la cohorte global de <strong>50 cupos</strong>.  
+          Estudiantes de México, Colombia, España, Argentina, EE.UU. y más ya están monetizando con lo que aprendieron.
+        </p>
+        <div class="cta-buttons">
+          <a href="#cursos" class="btn-primary">Inscribirse ahora</a>
+          <a href="#metodo" class="btn-secondary">Ver método</a>
+        </div>
 
-/* Logo con efecto digital */
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  color: #0f0;
-  text-shadow: 0 0 10px #0f0;
-  letter-spacing: 1px;
-}
+        <!-- Estadísticas globales -->
+        <div class="global-stats">
+          <div class="stat">
+            <strong>+2,300</strong>
+            <span>Estudiantes</span>
+          </div>
+          <div class="stat">
+            <strong>28</strong>
+            <span>Países</span>
+          </div>
+          <div class="stat">
+            <strong>$83,420+</strong>
+            <span>Ganado en total</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Botones estilo terminal */
-.btn-primary {
-  background: rgba(0, 20, 0, 0.8);
-  border: 1px solid #0f0;
-  padding: 12px 30px;
-  border-radius: 0;
-  font-family: 'Courier New';
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-}
+  <!-- Cursos -->
+  <section id="cursos" class="courses">
+    <div class="container">
+      <h2 class="section-title">Cursos que Cambian Vidas</h2>
+      <p class="section-desc">Aprende a monetizar con IA. Proyectos reales, comunidad y certificado.</p>
 
-.btn-primary:hover {
-  background: rgba(0, 255, 0, 0.2);
-  text-shadow: 0 0 20px #0f0;
-  transform: scale(1.05);
-}
+      <div class="course-cards">
+        <div class="course-card">
+          <div class="level">Nivel: Principiante</div>
+          <h3>IA desde Cero</h3>
+          <p>Conceptos clave: machine learning, ética, aplicaciones reales. Sin experiencia.</p>
+          <ul class="features">
+            <li>✅ 8 proyectos prácticos</li>
+            <li>✅ Certificado digital</li>
+            <li>✅ Comunidad privada</li>
+          </ul>
+          <div class="price">USD $69 <span>últimos cupos</span></div>
+          <a href="#contacto" class="btn-primary">Inscribirse</a>
+        </div>
 
-/* Contenedor principal */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  border-left: 1px solid rgba(0, 255, 0, 0.3);
-  border-right: 1px solid rgba(0, 255, 0, 0.3);
-}
+        <div class="course-card featured">
+          <div class="level">🔥 Más de $50,000 generados por estudiantes</div>
+          <h3>IA para Ganar Dinero</h3>
+          <p>Crea bots, automatizaciones y servicios de IA que venden por ti 24/7.</p>
+          <ul class="features">
+            <li>✅ 10 proyectos con valor real</li>
+            <li>✅ Plantillas para vender</li>
+            <li>✅ Mentoría en comunidad</li>
+          </ul>
+          <div class="price">USD $99 <span>últimos 50 cupos</span></div>
+          <a href="#contacto" class="btn-primary">Inscribirse ahora</a>
+        </div>
 
-/* Secciones */
-section {
-  padding: 80px 0;
-  border-top: 1px solid rgba(0, 255, 0, 0.1);
-  position: relative;
-}
+        <div class="course-card">
+          <div class="level">Nivel: Avanzado</div>
+          <h3>Deep Learning & LLMs</h3>
+          <p>Fine-tuning, RAG, creación de modelos personalizados. Para desarrolladores.</p>
+          <ul class="features">
+            <li>✅ Acceso a GPU en la nube</li>
+            <li>✅ Proyecto final con presentación</li>
+            <li>✅ Networking con expertos</li>
+          </ul>
+          <div class="price">USD $149 <span>4 cuotas sin interés</span></div>
+          <a href="#contacto" class="btn-primary">Inscribirse</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-section::before {
-  content: '>';
-  position: absolute;
-  left: 20px;
-  top: 30px;
-  color: rgba(0, 255, 0, 0.3);
-  font-size: 2rem;
-  opacity: 0.5;
-  z-index: -1;
-}
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-video">
+          <div class="video-thumb">
+            <i class="fas fa-play"></i>
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Camila, 17 años">
+          </div>
+          <div class="video-info">
+            <strong>Camila R., 17 años – México</strong>
+            <p>"Con el curso de IA, creé un bot que vende stickers en Instagram. Ya gané más de $1,200."</p>
+          </div>
+        </div>
 
-/* Títulos */
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-}
+        <div class="testimonial-video">
+          <div class="video-thumb">
+            <i class="fas fa-play"></i>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Diego, 28 años">
+          </div>
+          <div class="video-info">
+            <strong>Diego M., 28 años – Argentina</strong>
+            <p>"Automatizamos el servicio al cliente de mi negocio. Ahorro de $3,000 al mes."</p>
+          </div>
+        </div>
 
-h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  font-family: 'Orbitron', sans-serif;
-  border-bottom: 1px solid rgba(0, 255, 0, 0.3);
-  padding-bottom: 10px;
-}
+        <div class="testimonial-video">
+          <div class="video-thumb">
+            <i class="fas fa-play"></i>
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Lucía, 45 años">
+          </div>
+          <div class="video-info">
+            <strong>Lucía T., 45 años – España</strong>
+            <p>"Nunca pensé que a mi edad podría aprender IA. Hoy tengo mi propio emprendimiento."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Cursos */
-.course-card {
-  background: rgba(0, 20, 0, 0.6);
-  border: 1px solid rgba(0, 255, 0, 0.3);
-  padding: 25px;
-  margin: 15px 0;
-  border-left: 3px solid #0f0;
-  transition: transform 0.3s;
-}
+  <!-- Footer -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Nuevo Mundo IA</h3>
+          <p>Educación en IA para todos. En español, accesible y con sentido humano.</p>
+          <div class="social">
+            <a href="https://instagram.com/alexander_nvd" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#metodo">Método</a></li>
+            <li><a href="#testimonios">Estudiantes</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>📧 <a href="mailto:nuevomundoiacursopremium@gmail.com">nuevomundoiacursopremium@gmail.com</a></p>
+          <p>📱 <a href="https://instagram.com/alexander_nvd" target="_blank">@alexander_nvd</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nuevo Mundo IA. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 
-.course-card:hover {
-  transform: translateX(10px);
-  background: rgba(0, 30, 0, 0.7);
-}
-
-/* Testimonios */
-.testimonial {
-  background: rgba(0, 10, 0, 0.5);
-  border: 1px dashed rgba(0, 255, 0, 0.3);
-  padding: 20px;
-  margin: 20px 0;
-  font-style: italic;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 40px 0;
-  margin-top: 50px;
-  border-top: 1px solid rgba(0, 255, 0, 0.3);
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-/* Animación de glitch (opcional) */
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
-}
-
-.highlight {
-  animation: glitch 2s infinite;
-}
-
-/* Fuente futurista */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+  <script src="script.js"></script>
+</body>
+</html>
